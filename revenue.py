@@ -1,4 +1,4 @@
-import rates, volumes
+import rates, volumes, sales
 
 # Sums sale volume for a particular test and clinic type over a five-year range based on 
 def SaleVolume(volume, salerate, clinicrate, ...):
