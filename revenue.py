@@ -46,3 +46,9 @@ gc_hep = SaleVolume(rates.gc_hep, volumes.hep, sales.hep)
 gc_prim = SaleVolume(rates.gc_prim, volumes.prim, sales.prim)
 gc_gyn = SaleVolume(rates.gc_gyn, volumes.gyn, sales.gyn)
 gc_urg = SaleVolume(rates.gc_urg, volumes.urg, sales.urg)
+
+def Compile(list1, list2, list3, list4):
+  resultlist = []
+  for x in range(0,4):
+    resultlist.append(list1[x]+list2[x]+list3[x]+list4[x])
+  return resultlist
