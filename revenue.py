@@ -1,4 +1,4 @@
 import rates, volumes
 
-# Sums patient volume for a particular test over five-year range based on 
-def PatientVolume(volume, salerate, 
+# Sums sale volume for a particular test and clinic type over a five-year range based on 
+def SaleVolume(volume, salerate, 
