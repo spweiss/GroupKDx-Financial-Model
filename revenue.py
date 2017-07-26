@@ -11,6 +11,6 @@ def SaleVolume(volume, rate, sale):
     else:
       for y in range(0,12):
         clinics += sale[x-1]
-        result += volume*salerate*clinics
+        result += volume*rate*clinics
       resultlist[x-1] = result
   return resultlist
