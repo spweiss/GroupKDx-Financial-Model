@@ -1,10 +1,16 @@
 import rates, volumes, sales
 
-# Sums sale volume for a particular test and clinic type over a five-year range based on 
-def SaleVolume(volume, rate, sale, ...):
+# Sums sale volume for a particular test and clinic type over a five-year range based on _______
+def SaleVolume(volume, rate, sale):
   resultlist = []
   result = 0
   clinics = 0
-  for x in range(0,12):
-    clinics += sale
-    result += volume*salerate*clinics
+  for x in range(0,5):
+    if sale[x-1] == 0:
+      resultlist[x-1] = 0
+    else:
+      for y in range(0,12):
+        clinics += sale[x-1]
+        result += volume*salerate*clinics
+      resultlist[x-1] = result
+  return resultlist
