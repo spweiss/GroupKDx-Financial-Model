@@ -8,13 +8,11 @@ def SaleVolume(rate, volume, sale):
   for x in range(0,5):
     if sale[x] == 0:
       resultlist.append(0)
-      print "zero year"
     else:
       for y in range(0,12):
         clinics += sale[x]
         result += volume*rate*clinics
       resultlist.append(result)
-      print "year finished"
   return resultlist
 
 # Finds sale volumes for each test-clinic combination
