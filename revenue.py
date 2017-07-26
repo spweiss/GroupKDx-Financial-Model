@@ -7,7 +7,7 @@ def SaleVolume(volume, rate, sale):
   clinics = 0
   for x in range(0,5):
     if sale[x-1] == 0:
-      resultlist[x-1] = 0
+      resultlist.append(0)
     else:
       for y in range(0,12):
         clinics += sale[x-1]
