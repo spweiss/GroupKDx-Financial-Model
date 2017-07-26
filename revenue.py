@@ -32,17 +32,17 @@ card_prim = SaleVolume(rates.card_prim, volumes.prim, sales.prim)
 card_gyn = SaleVolume(rates.card_gyn, volumes.gyn, sales.gyn)
 card_urg = SaleVolume(rates.card_urg, volumes.urg, sales.urg)
 
-cbc_hep = 0.90
-cbc_prim = 0.35
-cbc_gyn = 0.00
-cbc_urg = 0.024
+cbc_hep = SaleVolume(rates.cbc_hep, volumes.hep, sales.hep)
+cbc_prim = SaleVolume(rates.cbc_prim, volumes.prim, sales.prim)
+cbc_gyn = SaleVolume(rates.cbc_gyn, volumes.gyn, sales.gyn)
+cbc_urg = SaleVolume(rates.cbc_gyn, volumes.gyn, sales.gyn)
 
-lip_hep = 0.00
-lip_prim = 0.05
-lip_gyn = 0.00
-lip_urg = 0.006
+lip_hep = SaleVolume(rates.lip_hep, volumes.hep, sales.hep)
+lip_prim = SaleVolume(rates.lip_prim, volumes.prim, sales.prim)
+lip_gyn = SaleVolume(rates.lip_gyn, volumes.gyn, sales.gyn)
+lip_urg = SaleVolume(rates.lip_urg, volumes.urg, sales.urg)
 
-gc_hep = 0.00
-gc_prim = 0.01
-gc_gyn = 0.50
-gc_urg = 0.002
+gc_hep = SaleVolume(rates.gc_hep, volumes.hep, sales.hep)
+gc_prim = SaleVolume(rates.gc_prim, volumes.prim, sales.prim)
+gc_gyn = SaleVolume(rates.gc_gyn, volumes.gyn, sales.gyn)
+gc_urg = SaleVolume(rates.gc_urg, volumes.urg, sales.urg)
