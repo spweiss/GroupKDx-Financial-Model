@@ -18,19 +18,19 @@ def SaleVolume(rate, volume, sale):
   return resultlist
 
 lft_hep = SaleVolume(rates.lft_hep, volumes.hep, sales.hep)
-lft_prim = 0.35
-lft_gyn = 0.00
-lft_urg = 0.003
+lft_prim = SaleVolume(rates.lft_prim, volumes.prim, sales.prim)
+lft_gyn = SaleVolume(rates.lft_gyn, volumes.gyn, sales.gyn)
+lft_urg = SaleVolume(rates.lft_urg, volumes.urg, sales.urg)
 
-cmp_hep = 0.90
-cmp_prim = 0.35
-cmp_gyn = 0.00
-cmp_urg = 0.018
+cmp_hep = SaleVolume(rates.cmp_hep, volumes.hep, sales.hep)
+cmp_prim = SaleVolume(rates.cmp_prim, volumes.prim, sales.prim)
+cmp_gyn = SaleVolume(rates.cmp_gyn, volumes.gyn, sales.gyn)
+cmp_urg = SaleVolume(rates.cmp_urg, volumes.urg, sales.urg)
 
-card_hep = 0.00
-card_prim = 0.013
-card_gyn = 0.00
-card_urg = 0.016
+card_hep = SaleVolume(rates.card_hep, volumes.hep, sales.hep)
+card_prim = SaleVolume(rates.card_prim, volumes.prim, sales.prim)
+card_gyn = SaleVolume(rates.card_gyn, volumes.gyn, sales.gyn)
+card_urg = SaleVolume(rates.card_urg, volumes.urg, sales.urg)
 
 cbc_hep = 0.90
 cbc_prim = 0.35
