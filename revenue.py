@@ -17,6 +17,8 @@ def SaleVolume(rate, volume, sale):
       print "year finished"
   return resultlist
 
+# Finds sale volumes for each test-clinic combination
+
 lft_hep = SaleVolume(rates.lft_hep, volumes.hep, sales.hep)
 lft_prim = SaleVolume(rates.lft_prim, volumes.prim, sales.prim)
 lft_gyn = SaleVolume(rates.lft_gyn, volumes.gyn, sales.gyn)
@@ -47,15 +49,27 @@ gc_prim = SaleVolume(rates.gc_prim, volumes.prim, sales.prim)
 gc_gyn = SaleVolume(rates.gc_gyn, volumes.gyn, sales.gyn)
 gc_urg = SaleVolume(rates.gc_urg, volumes.urg, sales.urg)
 
+# Sums the sales for each test across clinic types
 def Compile(list1, list2, list3, list4):
   resultlist = []
   for x in range(0,4):
     resultlist.append(list1[x]+list2[x]+list3[x]+list4[x])
   return resultlist
 
+# Finds the sale volumes for each test
 lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
 cmp_sales = Compile(cmp_hep, cmp_prim, cmp_gyn, cmp_urg)
 card_sales = Compile(card_hep, card_prim, card_gyn, card_urg)
 lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
 lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
 lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
+
+# Finds the total sale volume for each year
+total_sales = []
+for x in range(0,5):
+  total_sales.append(lft_sales[x]+cmp_sales[x]+card_sales[x]+cbc_sales[x]+lip_sales[x]+gc_sales[x])
+
+# Finds the total revenue in each year using the 12 USD panel price
+total_revenue = []
+for x in range(0,5):
+  total_revenue.append(total_sales[x]*12)
