@@ -1,6 +1,6 @@
 import rates, volumes, sales
 
-# Sums sale volume for a particular test and clinic type over a five-year range based on _______
+# Sums sale volume for a particular test and clinic type over a five-year range
 def SaleVolume(rate, volume, sale):
   resultlist = []
   result = 0
@@ -52,3 +52,10 @@ def Compile(list1, list2, list3, list4):
   for x in range(0,4):
     resultlist.append(list1[x]+list2[x]+list3[x]+list4[x])
   return resultlist
+
+lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
+cmp_sales = Compile(cmp_hep, cmp_prim, cmp_gyn, cmp_urg)
+card_sales = Compile(card_hep, card_prim, card_gyn, card_urg)
+lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
+lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
+lft_sales = Compile(lft_hep, lft_prim, lft_gyn, lft_urg)
